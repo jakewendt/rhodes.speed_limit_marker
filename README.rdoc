@@ -78,7 +78,9 @@ Ensure that you're using java/javac > 1.6.  I had to relink Current and CurrentJ
  javac 1.6.0_22
 
 
+Run it (can take a minute to compile and open emulator)
 
+ rake run:android
 
 
 
