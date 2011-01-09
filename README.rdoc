@@ -1,0 +1,90 @@
+= Speed Limit Marker
+
+Meddling with creating an Android app with Ruby on Rhodes
+
+
+== Creation
+
+Download the android sdk and add the following ...
+
+ setenv ANDROID_HOME /Users/jake/Android/android-sdk-mac_86
+ setenv PATH ${PATH}:$ANDROID_HOME/tools
+
+to my environment.
+
+Download the android ndk as well.
+ /Users/jake/Android/android-ndk-r5
+ /Users/jake/Android/android-sdk-mac_86
+
+Install packages from within android sdk
+
+ android
+
+
+
+
+Install the rhodes gem
+
+ gem install rhodes
+
+but this didn't install bins in my bindir so I had to add 
+
+ setenv PATH ${PATH}:/usr/lib/ruby/gems/1.8/gems/rhodes-2.2.6/bin
+
+to my envronment.
+
+ rhodes-setup
+
+	jake@mbp : rhodes-system-api-samples 513> rhodes-setup
+	We will ask you a few questions below about your dev environment.
+
+	JDK path (required) (/Library/Java/Home): 
+	Android SDK path (blank to skip) (/Users/jake/Android/android-sdk-mac_86): 
+	Android NDK path (blank to skip) (/Users/jake/Android/android-ndk-r5): 
+	Windows Mobile 6 SDK CabWiz (blank to skip) (): 
+	BlackBerry JDE 4.6 (blank to skip) (): 
+	BlackBerry JDE 4.6 MDS (blank to skip) (): 
+	BlackBerry JDE 4.2 (blank to skip) (): 
+	BlackBerry JDE 4.2 MDS (blank to skip) (): 
+
+	If you want to build with other BlackBerry SDK versions edit: /usr/lib/ruby/gems/1.8/gems/rhodes-2.2.6/rhobuild.yml
+
+Possibly add ..
+
+ setenv JAVA_HOME /Library/Java/Home
+
+
+Ensure that you're using java/javac > 1.6.  I had to relink Current and CurrentJDK
+
+ jake@mbp : ~ 501> ll /System/Library/Frameworks/JavaVM.framework/Versions/
+ total 56
+ lrwxr-xr-x   1 root  wheel    5 Oct 22 17:14 1.3 -> 1.3.1
+ drwxr-xr-x   3 root  wheel  102 Sep 28  2007 1.3.1
+ lrwxr-xr-x   1 root  wheel    5 Sep 20  2009 1.4 -> 1.4.2
+ lrwxr-xr-x   1 root  wheel    3 Apr 30  2008 1.4.1 -> 1.4
+ drwxr-xr-x   8 root  wheel  272 Aug  4  2007 1.4.2
+ drwxr-xr-x   8 root  wheel  272 Aug  4  2007 1.5.0
+ lrwxr-xr-x   1 root  wheel    5 Oct 22 17:14 1.6 -> 1.6.0
+ lrwxr-xr-x   1 root  wheel   59 Oct 22 17:14 1.6.0 -> /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents
+ drwxr-xr-x  10 root  wheel  340 Oct 22 17:15 A
+ lrwxr-xr-x   1 root  wheel    3 Jan  8 18:15 Current -> 1.6
+ lrwxr-xr-x   1 root  wheel    3 Jan  8 18:16 CurrentJDK -> 1.6
+
+ jake@mbp : ~ 504> java -version
+ java version "1.6.0_22"
+ Java(TM) SE Runtime Environment (build 1.6.0_22-b04-307-9M3263)
+ Java HotSpot(TM) 64-Bit Server VM (build 17.1-b03-307, mixed mode)
+ jake@mbp : ~ 505> javac -version
+ javac 1.6.0_22
+
+
+
+
+
+
+== Other
+
+http://wiki.rhomobile.com/index.php/Building_Rhodes_Apps_on_Supported_Platforms#Android
+https://github.com/rhomobile
+
+
