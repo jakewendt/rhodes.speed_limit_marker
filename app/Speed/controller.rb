@@ -27,3 +27,26 @@ class SpeedController < Rho::RhoController
 #	end
 
 end
+
+#                       HttpClient httpclient = new DefaultHttpClient();
+#                        List<NameValuePair> formparams = new ArrayList<NameValuePair>();
+#                        formparams.add(new BasicNameValuePair("mlat", latString));
+#                        formparams.add(new BasicNameValuePair("mlon", lonString));
+#
+#                        if(Global.mph_kph == true) {
+#                           formparams.add(new BasicNameValuePair("mmph", speed));
+#                           formparams.add(new BasicNameValuePair("mkph", dummy));
+#                        } else {
+#                           formparams.add(new BasicNameValuePair("mmph", dummy));
+#                           formparams.add(new BasicNameValuePair("mkph", speed));
+#                        }
+#                        
+#                        formparams.add(new BasicNameValuePair("mtag", name));
+#                        formparams.add(new BasicNameValuePair("mcog", direction));
+#                        formparams.add(new BasicNameValuePair("mhours", hours));
+#                        formparams.add(new BasicNameValuePair("memail", email));
+#                        UrlEncodedFormEntity entity = new UrlEncodedFormEntity(formparams, "UTF-8");
+#                        HttpPost httppost = new HttpPost("http://www.wikispeedia.org/a/process_submit_bb.php");
+#                        httppost.setEntity(entity);
+#                        httpclient.execute(httppost);
+

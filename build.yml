@@ -1,7 +1,16 @@
 sdk: "/usr/lib/ruby/gems/1.8/gems/rhodes-2.2.6"
 sdkversion: 2.2.6
-name: storemanager
-version: 1.0
+name: SpeedLimitMarker
+capabilities: 
+- gps
+- vibrate
+#- pim
+#- camera
+#- phone
+#- bluetooth
+#- calendar
+
+version: 1.1
 vendor: rhomobile
 build: debug
 bbver: 4.6
@@ -13,8 +22,9 @@ iphone:
   provisionprofile:
   codesignidentity:
   entitlements:
-  BundleIdentifier: com.rhomobile.storemanager
-  BundleURLScheme: storemanager
+  BundleIdentifier: com.rhomobile.speed_limit_marker
+  BundleURLScheme: speed_limit_marker
 
 extensions: ["json", "another-extension"]
-excludedirs: "versions/"
+#excludedirs: "versions/"
+
